@@ -10,6 +10,22 @@ namespace IUP_BMI_Calculator.Model
     [Table("BMIResult")]
     public class BMIResult
     {
-        // TODO
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
+
+        [MaxLength(250), Unique]
+        public string Name { get; set; }
+
+        [Unique]
+        public double Height { get; set; }
+
+        [Unique]
+        public double Weight { get; set; }
+
+        [Unique]
+        public double BMI_Score { get; set; }
+
+        [MaxLength(50), Unique]
+        public string BMI_Result { get; set; }
     }
 }

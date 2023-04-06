@@ -18,9 +18,8 @@ public static class MauiProgram
 			});
 
 		// TODO
-		string dbPath = FileAccessHelper.GetLocalFilePath("Rename this.db3");
-        builder.Services.AddSingleton<BMIResultRepository>(s => ActivatorUtilities.CreateInstance<BMIResultRepository>(s, dbPath));
-
+		string dbPath = FileAccessHelper.GetLocalFilePath("BMIResult_5999222005_Lisa.db3");
+        builder.Services.AddSingleton(s => ActivatorUtilities.CreateInstance<BMIResultRepository>(s, dbPath));
 #if DEBUG
         builder.Logging.AddDebug();
 #endif

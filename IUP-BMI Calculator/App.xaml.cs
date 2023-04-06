@@ -4,13 +4,14 @@ namespace IUP_BMI_Calculator;
 
 public partial class App : Application
 {
-	// TODO
-	public App(// TODO)
+    public static BMIResultRepository BMIRepo { get; private set; }
+
+    public App(BMIResultRepository repo)
 	{
 		InitializeComponent();
 
 		MainPage = new AppShell();
 
-		// TODO
+		BMIRepo = repo;
 	}
 }

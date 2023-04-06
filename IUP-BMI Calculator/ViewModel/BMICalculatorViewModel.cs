@@ -26,7 +26,7 @@ namespace IUP_BMI_Calculator.ViewModel
         public double weight;
 
         public double BMIScore
-            => Math.Round(Weight / Math.Pow(Height / 100, 2), 2);
+            => Math.Round(weight / Math.Pow(height / 100, 2), 2);
 
         public String BMIResult
         {
@@ -47,14 +47,16 @@ namespace IUP_BMI_Calculator.ViewModel
         public void Save()
         {
             // TO DO
-            App.
+            App.BMIRepo.AddNewBMIResult(name, height, weight, BMIScore, BMIResult);
+
+
 
         }
 
         [RelayCommand]
         public void Clear()
         {
-            // TODO
+            
         }
 
     }

@@ -4,11 +4,11 @@ namespace IUP_BMI_Calculator;
 
 public partial class MainPage : ContentPage
 {
-	public MainPage()
+	public MainPage(BMICalculatorViewModel viewModel)
 	{
 		InitializeComponent();
-		// TODO
-	}
+        BindingContext = viewModel;
+    }
 
 }
 
